@@ -1,20 +1,28 @@
-var scores, roundScore, dice, activePlayer, gamePlaying;
+var scores, roundScore, dice, activePlayer, gamePlaying, prevDice;
 
 init();
 
 document.querySelector('.btn-roll').addEventListener('click', function() {
     if(gamePlaying){
+        prevDice = dice;
         dice = Math.floor(Math.random() * 6) + 1;
-    document.getElementById('image').src = "img/dice-"+dice+".png";
-    document.querySelector('.dice').style.display = 'block';
-    if(dice === 1){
-        nextPlayer();
-    }
-    else 
-    {
-        roundScore += dice;
-        document.getElementById("current-"+activePlayer).innerHTML = roundScore;
-    }
+        console.log(activePlayer + " "+ prevDice+" "+dice + " "+scores);
+        document.getElementById('image').src = "img/dice-"+dice+".png";
+        document.querySelector('.dice').style.display = 'block';
+        if(prevDice === 6 && dice === 6) {
+            roundScore = 0;
+            scores[activePlayer] = 0;
+            document.querySelector('#score-'+activePlayer).innerHTML = '0';
+            nextPlayer();
+        }
+        if(dice === 1){
+            nextPlayer();
+        }
+        else 
+        {
+            roundScore += dice;
+            document.getElementById("current-"+activePlayer).innerHTML = roundScore;
+        }
 }
 });
 
@@ -44,6 +52,8 @@ function nextPlayer() {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
     document.querySelector('.dice').style.display = 'none';
+    prevDice = 0;
+    dice = 0;
     (activePlayer===0) ? activePlayer=1 : activePlayer=0;
 }
 
@@ -51,6 +61,7 @@ function init() {
     scores = [0,0];
     roundScore = 0;
     activePlayer = 0;
+    prevDice = 0;
     gamePlaying = true;
     document.querySelector('.dice').style.display = 'none';
     document.getElementById("score-0").textContent = '0';
