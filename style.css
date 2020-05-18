@@ -45,6 +45,11 @@ body {
     padding: 100px;
 }
 
+.copy {
+    text-align: right;
+    padding: 1rem;
+}
+
 
 
 /**********************************************
