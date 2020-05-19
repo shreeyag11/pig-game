@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="wrapper clearfix">
-            <div class="player-0-panel active">
+            <div class="dull player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
                 <div class="player-score" id="score-0">0</div>
                 <div class="player-current-box">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             
-            <div class="player-1-panel">
+            <div class="dull player-1-panel">
                 <div class="player-name" id="name-1">Player 2</div>
                 <div class="player-score" id="score-1">0</div>
                 <div class="player-current-box">
@@ -28,12 +28,19 @@
                 </div>
             </div>
             
-            <button class="btn-new" onclick="newGame()"><i class="ion-ios-plus-outline"></i>New game</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
-            <div class="copy">&copy; Shreeya Gupta </div>
+            <button class="hide btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="hide btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="hide btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <div class="copy">
+                &copy; 2020 &bull; <a href="http://github.com/shreeyag11">Shreeya Gupta </a>
+            </div>
             
             <img id="image" src="img/dice-5.png" alt="Dice" class="dice">
+            <div id="title">PIG GAME</div>
+            <input type="text" title="SET A WINNING SCORE e.g. 10" placeholder="SET A WINNING SCORE" 
+            class="limit-class"
+            id="limit" autofocus> 
+            <button id="limit-btn">Submit</button>
         </div>
 
         <script src="app.js"></script>

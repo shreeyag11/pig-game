@@ -50,7 +50,62 @@ body {
     padding: 1rem;
 }
 
+#title {
+    font-size: 80px;
+    font-family: Garamond;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 30%;
+    left: 29%;
+}
 
+.dull {
+    background-color: #d7d7d7;
+    filter: blur(5px);
+}
+
+.hide {
+    display: none;
+}
+
+#limit {
+    border-width: 0px;
+    position: absolute;
+    top: 50%;
+    left: 27.8%;
+    outline: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: block;
+    font: inherit;
+    font-size: 40px;
+    height: auto;
+    padding: 5px 8px 8px 7px;
+    width: 440px;
+    text-align: center;
+}
+
+#limit-btn {
+    border-width: 4px;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    outline: solid 2px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: block;
+    font: inherit;
+    font-size: 30px;
+    height: auto;
+    padding: 5px 8px 8px 7px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
 
 /**********************************************
 *** PLAYERS
