@@ -66,6 +66,7 @@ function init() {
     roundScore = 0;
     activePlayer = 0;
     gamePlaying = true;
+    winningScore = 100;
     document.querySelector('.dice_1').style.display = 'none';
     document.querySelector('.dice_2').style.display = 'none';
     document.getElementById("score-0").textContent = '0';
@@ -92,7 +93,9 @@ document.getElementById('limit-btn').addEventListener('click', function() {
     document.getElementById('title').classList.add('hide');
     document.querySelector('#limit-btn').style.display = 'none';
     document.querySelector('#limit').style.display = 'none';
+
 });
+
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
